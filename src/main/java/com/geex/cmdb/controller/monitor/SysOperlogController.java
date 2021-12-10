@@ -14,6 +14,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
@@ -29,6 +30,7 @@ import java.util.List;
 @RequestMapping("/monitor/operlog")
 public class SysOperlogController extends BaseController {
 
+    @Resource
     private ISysOperLogService operLogService;
 
     //@ApiOperation("查询操作日志记录列表")

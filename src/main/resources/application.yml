@@ -1,7 +1,7 @@
 # 项目相关配置
 geex:
   # 名称
-  name: GEEX--CMBD
+  name: GEEX-CMBD
   # 版本
   version: ${geex-vue-plus.version}
   # 版权年份

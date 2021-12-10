@@ -133,8 +133,12 @@ public class LogAspect {
             String params = argsArrayToString(joinPoint.getArgs());
             operLog.setOperParam(StringUtils.substring(params, 0, 2000));
         } else {
-            Map<?, ?> paramsMap = (Map<?, ?>) ServletUtils.getRequest().getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
-            operLog.setOperParam(StringUtils.substring(paramsMap.toString(), 0, 2000));
+            //org.springframework.web.reactive.HandlerMapping.uriTemplateVariables
+            Object o = ServletUtils.getRequest().getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
+            if(null != o){
+                Map<?, ?> paramsMap = (Map<?, ?>)o;
+                operLog.setOperParam(StringUtils.substring(paramsMap.toString(), 0, 2000));
+            }
         }
     }
 

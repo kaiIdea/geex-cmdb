@@ -133,4 +133,16 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
         // long sec = diff % nd % nh % nm / ns;
         return day + "天" + hour + "小时" + min + "分钟";
     }
+
+    public static String convertDateStr(Date date){
+        String sDate = "";
+        SimpleDateFormat sdf1 = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
+        try {
+            sDate = sdf1.format(date);
+            ////System.out.println(sDate);
+        } catch (Exception e) {
+            e.printStackTrace ( );
+        }
+        return sDate;
+    }
 }
