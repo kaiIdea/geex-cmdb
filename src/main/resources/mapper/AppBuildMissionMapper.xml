@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geex.cmdb.system.mapper.AppBuildMissionMapper">
+
+    <resultMap type="com.geex.cmdb.system.domain.AppBuildMission" id="AppBuildMissionResult">
+        <result property="id" column="id"/>
+        <result property="projectName" column="project_name"/>
+        <result property="subProjectName" column="sub_project_name"/>
+        <result property="branch" column="branch"/>
+        <result property="commitMessage" column="commit_message"/>
+        <result property="runProfile" column="run_profile"/>
+        <result property="gitGroup" column="git_group"/>
+        <result property="appPort" column="app_port"/>
+        <result property="xxlPort" column="xxl_port"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+
+</mapper>

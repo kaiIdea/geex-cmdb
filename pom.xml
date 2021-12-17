@@ -232,7 +232,11 @@
             <artifactId>tlog-spring-boot-configuration</artifactId>
             <version>${tlog.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.gitlab4j</groupId>
+            <artifactId>gitlab4j-api</artifactId>
+            <version>4.17.0</version>
+        </dependency>
         <dependency>
             <groupId>com.yomahub</groupId>
             <artifactId>tlog-webroot</artifactId>
@@ -263,7 +267,11 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.offbytwo.jenkins</groupId>
+            <artifactId>jenkins-client</artifactId>
+            <version>0.3.8</version>
+        </dependency>
 
         <dependency>
             <groupId>com.qiniu</groupId>

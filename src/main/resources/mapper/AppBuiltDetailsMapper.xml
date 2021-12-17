@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geex.cmdb.system.mapper.AppBuiltDetailsMapper">
+
+    <resultMap type="com.geex.cmdb.system.domain.AppBuiltDetails" id="AppBuiltDetailsResult">
+        <result property="id" column="id"/>
+        <result property="buildId" column="build_id"/>
+        <result property="buildName" column="build_name"/>
+        <result property="buildTime" column="build_Time"/>
+        <result property="buildResult" column="build_result"/>
+        <result property="acceptCheck" column="accept_check"/>
+        <result property="processId" column="process_id"/>
+        <result property="imageTag" column="image_tag"/>
+        <result property="acceptCheckTime" column="accept_check_time"/>
+        <result property="reviewStatus" column="review_status"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+
+</mapper>

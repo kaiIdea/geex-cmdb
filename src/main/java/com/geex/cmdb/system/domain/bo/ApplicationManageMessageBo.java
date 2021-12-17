@@ -1,0 +1,73 @@
+package com.geex.cmdb.system.domain.bo;
+import com.geex.cmdb.common.core.domain.BaseEntity;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import javax.validation.constraints.*;
+
+
+
+/**
+ * 应用管理业务对象 application_manage_message
+ *
+ * @author kk
+ * @date 2021-12-13
+ */
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class ApplicationManageMessageBo extends BaseEntity {
+
+    /**
+     *
+     */
+    private Long ID;
+
+    /**
+     * 应用类型
+     * */
+    private String applicationType;
+
+    /**
+     * 应用名称
+     */
+    private String applicationName;
+
+    /**
+     * 应用唯一标识符
+     */
+    private String applicationMark;
+
+    /**
+     * 描述信息
+     */
+    private String applicationDesc;
+
+    /**
+     * 备注
+     */
+    private String remark;
+
+
+    /**
+     * 分页大小
+     */
+    private Integer pageSize;
+
+    /**
+     * 当前页数
+     */
+    private Integer pageNum;
+
+    /**
+     * 排序列
+     */
+    private String orderByColumn;
+
+    /**
+     * 排序的方向desc或者asc
+     */
+    private String isAsc;
+
+    private String gitlabGroup;
+
+}

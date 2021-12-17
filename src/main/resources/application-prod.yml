@@ -3,22 +3,7 @@ spring:
   servlet:
     multipart:
       # 临时文件存储位置 避免临时文件被系统清理报错
-      location: /ruoyi/server/temp
-
---- # 监控配置
-spring:
-  boot:
-    admin:
-      # Spring Boot Admin Client 客户端的相关配置
-      client:
-        # 增加客户端开关
-        enabled: true
-        # 设置 Spring Boot Admin Server 地址
-        url: http://172.30.0.90:9090/admin
-        instance:
-          prefer-ip: true # 注册实例时，优先使用 IP
-        username: ruoyi
-        password: 123456
+      location: /cmdb/server/temp
 
 --- #数据源配置
 spring:

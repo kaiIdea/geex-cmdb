@@ -44,7 +44,7 @@ public class IDockerRepositoryServiceTest {
 
     @Test
     public void queryImage() {
-        List<HarborImage> list = dockerRepositoryService.queryImage("alpha","geex-check-provider",null);
+        List<HarborImage> list = dockerRepositoryService.queryImage("alpha","geex-check-provider_release20211221",null);
         System.out.println();
     }
 }

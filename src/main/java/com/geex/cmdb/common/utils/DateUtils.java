@@ -5,6 +5,10 @@ import org.apache.commons.lang3.time.DateFormatUtils;
 import java.lang.management.ManagementFactory;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
 
 /**
@@ -59,9 +63,20 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
         return parseDateToStr(format, new Date());
     }
 
+
+    public static final Date dateTimeFormate(final Date date) {
+        return convertStrToDate(new SimpleDateFormat(YYYY_MM_DD).format(date));
+    }
+
     public static final String dateTime(final Date date) {
         return parseDateToStr(YYYY_MM_DD, date);
     }
+
+    public static final String dateTime1(final Date date) {
+        return parseDateToStr(YYYY_MM_DD_HH_MM_SS, date);
+    }
+
+
 
     public static final String parseDateToStr(final String format, final Date date) {
         return new SimpleDateFormat(format).format(date);
@@ -145,4 +160,45 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
         }
         return sDate;
     }
+
+    public static Date StringToDate(LocalDateTime localDateTime) {
+        ZoneId zone = ZoneId.systemDefault();
+        Instant instant = localDateTime.atZone(zone).toInstant();
+        return Date.from(instant);
+    }
+
+    public static LocalDateTime plusDay(Integer plusDay){
+        LocalDateTime localDateTime = LocalDateTime.now();
+        if(0 != plusDay){
+            localDateTime = localDateTime.plusDays(plusDay);
+        }
+        return localDateTime;
+    }
+
+    public static Date convertBeforeDate(Integer plusDays){
+        LocalDate localDate = LocalDate.now();
+        if(0 != plusDays){
+            localDate = localDate.plusDays(plusDays);
+        }
+        ZoneId zone = ZoneId.systemDefault();
+        Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();
+        return Date.from(instant);
+    }
+
+    public static Date convertStrToDate(String date){
+        LocalDate localDate = LocalDate.parse(date);
+        ZoneId zone = ZoneId.systemDefault();
+        Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();
+        return Date.from(instant);
+    }
+
+    public static Date nowStrPlusToDate(Integer plusDay){
+        return StringToDate(plusDay(plusDay));
+    }
+
+    public static void main(String[] args) {
+        Date a = convertBeforeDate(-10);
+        System.out.println();
+    }
+
 }

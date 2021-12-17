@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geex.cmdb.mapper.ApplicationManageMessageMapper">
+
+    <resultMap type="com.geex.cmdb.system.domain.ApplicationManageMessage" id="ApplicationManageMessageResult">
+        <result property="ID" column="ID"/>
+        <result property="applicationType" column="application_type"/>
+        <result property="applicationName" column="application_name"/>
+        <result property="applicationMark" column="application_mark"/>
+        <result property="applicationDesc" column="application_desc"/>
+        <result property="gitlabGroup" column="gitlab_group"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+
+</mapper>
